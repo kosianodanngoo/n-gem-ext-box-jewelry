@@ -2,15 +2,16 @@ package dev.archthefile.gemextjewelry.event;
 
 import dev.archthefile.gemextjewelry.GemExtJewelry;
 import dev.archthefile.gemextjewelry.datagen.CuriosSlotProvider;
+import dev.archthefile.gemextjewelry.datagen.recipes.GemExtJewelryRecipeProvider;
 import dev.archthefile.gemextjewelry.datagen.tag.BlockTagProvider;
 import dev.archthefile.gemextjewelry.datagen.tag.CuriosTagProvider;
 import dev.archthefile.gemextjewelry.datagen.tag.ItemTagProvider;
+import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.data.event.GatherDataEvent;
-import net.minecraft.core.HolderLookup.Provider;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
@@ -40,5 +41,7 @@ public class GemExtJewelryEvent {
         );
 
         generator.addProvider(server, new CuriosSlotProvider(GemExtJewelry.MODID, packOutput, existingFileHelper, lookupProvider));
+
+        generator.addProvider(server, new GemExtJewelryRecipeProvider(packOutput));
     }
 }

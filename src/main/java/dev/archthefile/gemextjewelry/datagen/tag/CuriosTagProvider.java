@@ -1,9 +1,9 @@
 package dev.archthefile.gemextjewelry.datagen.tag;
 
 import dev.archthefile.gemextjewelry.registry.GemExtJewelryRegistry;
+import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
-import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.data.tags.TagsProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
@@ -15,7 +15,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.concurrent.CompletableFuture;
 
 @SuppressWarnings("removal")
-public class CuriosTagProvider extends ItemTagsProvider{
+public class CuriosTagProvider extends ItemTagsProvider {
     public CuriosTagProvider(
             PackOutput pOutput,
             CompletableFuture<Provider> pLookupProvider,

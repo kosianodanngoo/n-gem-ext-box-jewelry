@@ -22,5 +22,6 @@ public class GemExtJewelry {
         IEventBus bus = context.getModEventBus();
 
         GemExtJewelryRegistry.ITEMS.register(bus);
+        GemExtJewelryRegistry.RECIPE_SERIALIZER.register(bus);
     }
 }
