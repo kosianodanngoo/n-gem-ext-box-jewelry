@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "gemextjewelry:item/gem_ring_empty",
+    "layer1": "gemextjewelry:item/empty"
+  }
+}

@@ -12,7 +12,7 @@ import org.slf4j.Logger;
 public class GemExtJewelry {
 
     public static final String MODID = "gemextjewelry";
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
 
     public GemExtJewelry() {
         this(FMLJavaModLoadingContext.get());

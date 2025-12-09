@@ -151,11 +151,15 @@ dependencies {
     compileOnly fg.deobf("top.theillusivec4.curios:curios-forge:${curios_version}:api")
     runtimeOnly fg.deobf("top.theillusivec4.curios:curios-forge:${curios_version}")
 
-    implementation fg.deobf("curse.maven:n-gem-ext-box-1377742:7245448")
+    implementation fg.deobf("curse.maven:n-gem-ext-box-1377742:7270448")
 
     runtimeOnly fg.deobf("curse.maven:jei-238222:7245195")
 
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+    compileOnly annotationProcessor("io.github.llamalad7:mixinextras-common:0.5.0")
+    implementation jarJar("io.github.llamalad7:mixinextras-forge:0.5.0")  {
+        jarJar.ranged(it, "[0.5.0,)")
+    }
 
 }
 

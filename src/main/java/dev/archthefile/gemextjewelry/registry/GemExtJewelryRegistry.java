@@ -1,6 +1,7 @@
 package dev.archthefile.gemextjewelry.registry;
 
 import dev.archthefile.gemextjewelry.GemExtJewelry;
+import dev.archthefile.gemextjewelry.items.GemCharmItem;
 import dev.archthefile.gemextjewelry.items.GemRingItem;
 import dev.archthefile.gemextjewelry.recipe.GemRingRecipeSerializer;
 import net.minecraft.world.item.Item;
@@ -14,6 +15,8 @@ public class GemExtJewelryRegistry {
     public static final DeferredRegister<RecipeSerializer<?>> RECIPE_SERIALIZER = DeferredRegister.create(ForgeRegistries.RECIPE_SERIALIZERS, GemExtJewelry.MODID);
 
     public static RegistryObject<Item> GEM_RING = ITEMS.register("gem_ring", () -> new GemRingItem(new Item.Properties().stacksTo(1)));
+    public static RegistryObject<Item> GEM_CHARM = ITEMS.register("gem_charm", () -> new GemCharmItem(new Item.Properties().stacksTo(1)));
+    public static RegistryObject<Item> ULTIMATE_GEM = ITEMS.register("diamondgarnetaquamarinetourmalineemeraldperidotrose_quartzmoonstonerubysapphireamethysttopazlapis", () -> new Item(new Item.Properties()));
 
     public static RegistryObject<RecipeSerializer<?>> GEM_RING_RECIPE = RECIPE_SERIALIZER.register("gem_ring_recipe", GemRingRecipeSerializer::new);
 }

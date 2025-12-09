@@ -29,5 +29,7 @@ public class CuriosTagProvider extends ItemTagsProvider {
     protected void addTags(@NotNull Provider pProvider) {
         this.tag(ItemTags.create(new ResourceLocation("curios", "ring")))
                 .add(GemExtJewelryRegistry.GEM_RING.get());
+        this.tag(ItemTags.create(new ResourceLocation("curios", "charm")))
+                .add(GemExtJewelryRegistry.GEM_CHARM.get());
     }
 }

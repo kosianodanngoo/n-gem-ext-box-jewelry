@@ -1,6 +1,7 @@
 package dev.archthefile.gemextjewelry.recipe;
 
 import com.Nuaah.NGemExtBoxMod.regi.tag.NGemExtBoxModTags;
+import dev.archthefile.gemextjewelry.GemExtJewelry;
 import dev.archthefile.gemextjewelry.registry.GemExtJewelryRegistry;
 import net.minecraft.core.Holder;
 import net.minecraft.core.NonNullList;
@@ -16,6 +17,7 @@ import net.minecraft.world.item.crafting.CustomRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.Level;
+import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.List;
 
@@ -78,10 +80,8 @@ public class GemRingRecipe extends CustomRecipe {
         if (rings != 1 || gem.isEmpty()) {
             return ItemStack.EMPTY;
         }
-
-
+        output.getOrCreateTag().putString("gemextjewelry:gem", ForgeRegistries.ITEMS.getKey(gem.getItem()).toString());
         return output;
-
     }
 
     @Override
@@ -95,6 +95,6 @@ public class GemRingRecipe extends CustomRecipe {
 
     @Override
     public RecipeSerializer<?> getSerializer() {
-        return null;
+        return GemExtJewelryRegistry.GEM_RING_RECIPE.get();
     }
 }

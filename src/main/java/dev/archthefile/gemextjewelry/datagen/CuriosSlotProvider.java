@@ -19,6 +19,7 @@ public class CuriosSlotProvider extends CuriosDataProvider {
     @Override
     public void generate(HolderLookup.Provider registries, ExistingFileHelper fileHelper) {
         this.createSlot("ring").replace(false).size(3);
-        this.createEntities("gemextjewelry").addPlayer().addSlots("ring");
+        this.createSlot("charm").replace(false).size(1);
+        this.createEntities("gemextjewelry").addPlayer().addSlots("ring", "charm");
     }
 }

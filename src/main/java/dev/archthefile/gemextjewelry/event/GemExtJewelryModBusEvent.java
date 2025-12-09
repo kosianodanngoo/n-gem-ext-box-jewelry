@@ -17,8 +17,9 @@ import net.minecraftforge.fml.common.Mod;
 
 import java.util.concurrent.CompletableFuture;
 
+@SuppressWarnings("removal")
 @Mod.EventBusSubscriber(modid = GemExtJewelry.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
-public class GemExtJewelryEvent {
+public class GemExtJewelryModBusEvent {
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
@@ -44,4 +45,6 @@ public class GemExtJewelryEvent {
 
         generator.addProvider(server, new GemExtJewelryRecipeProvider(packOutput));
     }
+
+
 }
